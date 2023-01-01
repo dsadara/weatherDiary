@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @SpringBootTest
-@Transactional // -> 테스트 코드를 실행하고 db를 원상복구시킴
+@Transactional // 테스트 코드를 실행하고 db를 원상복구시킴, 정확히는 DB에 수정사항을 만들지 않는 테스트를 할 수 있게 함
 public class JdbcMemoRepositoryTest {
 
     @Autowired
