@@ -101,4 +101,10 @@ public class DiaryService {
     public List<Diary> readDiaries(LocalDate startDate, LocalDate endDate) {
         return diaryRepository.findAllByDateBetween(startDate, endDate);
     }
+
+    public void updateDiary(LocalDate date, String text) {
+        Diary nowDiary = diaryRepository.getFirstByDate(date);
+        nowDiary.setText(text);
+        diaryRepository.save(nowDiary); // 있는 id의 레코드를 save하면 덮어 쓰기가 됨
+    }
 }
