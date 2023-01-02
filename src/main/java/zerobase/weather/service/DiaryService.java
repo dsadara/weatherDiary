@@ -107,4 +107,8 @@ public class DiaryService {
         nowDiary.setText(text);
         diaryRepository.save(nowDiary); // 있는 id의 레코드를 save하면 덮어 쓰기가 됨
     }
+
+    public void deleteDiary(LocalDate date) {
+        diaryRepository.deleteAllByDate(date);
+    }
 }
