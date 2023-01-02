@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @SpringBootTest
-@Transactional
+@Transactional // 테스트 코드에 이걸 붙이면 commit을 안시키는 것임
 public class JpaMemoRepositoryTest {
 
     @Autowired
